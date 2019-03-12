@@ -11,8 +11,9 @@ const webpackData = require('./libs/getData.js')(config);
 module.exports = {
   entry: Object.assign(webpackData.entryScripts, { styles: webpackData.entryStyles }),
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: 'js/[name].js'
+    path: webpackData.distDir,
+    filename: 'js/[name].js',
+    publicPath: '../'
   },
   module: {
     rules: [
@@ -61,12 +62,12 @@ module.exports = {
         ]
       },
       {
-        test: /\.sass/,
+        test: /\.sass$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: 'css/[name].css',
+              name: 'css/[name].css'
             }
           },
           'extract-loader',
@@ -87,7 +88,8 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: 'fonts/[name][hash].[ext]'
+            name: '[name][hash].[ext]',
+            outputPath: 'fonts/'
           }
         },
       }
