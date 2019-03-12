@@ -1,0 +1,102 @@
+// main modules
+const path = require('path');
+
+// files configuration
+const config = require('../config/default.js');
+
+// data container
+const webpackData = require('./libs/getData.js')(config);
+
+// main config
+module.exports = {
+  entry: Object.assign(webpackData.entryScripts, { styles: webpackData.entryStyles }),
+  output: {
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'js/[name].js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              emitFile: true, // Don't forget emit images.
+              outputPath: 'img/',
+              name: '[name].[ext]',
+              mozjpeg: {
+                progressive: true,
+                quality: 70
+              }
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(mov|mp4)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'videos/[name].[ext]'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader?attrs[]=video:src'
+      },
+      {
+        test: /\.(pug|jade)$/,
+        exclude: /(node_modules|bower_components)/,
+        use:  [
+          'html-loader',
+          {
+          loader: 'pug-html-loader',
+          options: {
+            data: {}
+          }}
+        ]
+      },
+      {
+        test: /\.sass/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'css/[name].css',
+            }
+          },
+          'extract-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.(otf|eot|svg|ttf|woff|woff2)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name][hash].[ext]'
+          }
+        },
+      }
+    ]
+  },
+  resolve: {
+    extensions: [ '.js', '.mjs' ]
+  },
+  optimization: {
+    minimize: false
+  }
+};

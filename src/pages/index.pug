@@ -1,0 +1,24 @@
+extends layout/default
+
+block vars
+  -
+    page = {
+      language: 'ua',
+      name: 'home',
+      title: 'Frontpage',
+      appTitle: 'Frontpage',
+      description: 'Main page'
+    }
+
+block beforeload
+  link(rel="stylesheet", href="css/frontpage.css")
+  
+block afterload
+  script(src="js/index.js")
+  
+block content
+  h1 Hello world
+  video(controls="controls")
+    source(src="videos/green_cell.mp4" type="video/mp4")    
+  img(src="../assets/images/Flowering_trees_Sakura_427376.jpg", alt="Flowering_trees_Sakura_427376")  
+  
