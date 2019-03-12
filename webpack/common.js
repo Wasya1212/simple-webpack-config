@@ -25,7 +25,7 @@ module.exports = {
             options: {
               emitFile: true, // Don't forget emit images.
               outputPath: 'img/',
-              name: '[name][hash].[ext]',
+              name: '[name]-[hash].[ext]',
               mozjpeg: {
                 progressive: true,
                 quality: 70
@@ -96,7 +96,8 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.js', '.mjs' ]
+    extensions: [ '.js', '.mjs' ],
+    modules: ['node_modules']
   },
   optimization: {
     minimize: false
