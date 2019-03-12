@@ -1,0 +1,30 @@
+-
+  socialNetworks = [
+    {
+      icon: '../assets/icons/twitter-bird-twitter-button-bird-picture-57340.png',
+      name: 'facebook',
+      link: 'https://www.facebook.com'
+    },
+    {
+      icon: '../assets/icons/kissclipart-facebook-logo-no-border-clipart-facebook-social-me-f55201dcf7b9bc94.png',
+      name: 'twitter',
+      link: 'https://twitter.com'
+    },
+    {
+      icon: '../assets/icons/instagram.png',
+      name: 'instagram',
+      link: 'https://www.instagram.com'
+    },
+    {
+      icon: '../assets/icons/google_plus-svg.png',
+      name: 'google',
+      link: 'https://mail.google.com'
+    }
+  ]
+
++b.UL.socials
+  each socialNetwork in socialNetworks
+    +e.LI.item
+      +b.DIV(class="socials__item__container " + socialNetwork.name)
+        +e.A.icon(href= socialNetwork.link)
+          +e.IMG(src= socialNetwork.icon, alt= socialNetwork.name)
