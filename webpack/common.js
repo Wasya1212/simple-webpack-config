@@ -25,7 +25,7 @@ module.exports = {
             options: {
               emitFile: true, // Don't forget emit images.
               outputPath: 'img/',
-              name: '[name].[ext]',
+              name: '[name][hash].[ext]',
               mozjpeg: {
                 progressive: true,
                 quality: 70
@@ -67,7 +67,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'css/[name].css'
+              name: 'css/[name]-[hash].css'
             }
           },
           'extract-loader',
@@ -88,7 +88,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name][hash].[ext]',
+            name: '[name]-[hash].[ext]',
             outputPath: 'fonts/'
           }
         },
