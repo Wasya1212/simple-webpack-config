@@ -1,3 +1,5 @@
+@import "../variables.sass"
+
 .contacts
   &__list
     padding: 0
@@ -6,7 +8,17 @@
       display: inline-block
       list-style-type: none
       padding: .5rem
+      color: $mainLinksColor
+      transition: all .1s ease-in-out
+      &:hover
+        color: $mainLinksHoverColor
+        a
+          text-decoration: underline
       &:first-child
         padding: 0 .5rem 0 0
       &:last-child
         padding: 0 0 0 .5rem
+      a
+        text-decoration: none
+      i
+        margin-right: .5rem

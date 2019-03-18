@@ -1,0 +1,69 @@
+@import "../variables.sass"
+
+$featureIconSize: 100px
+
+.features
+  margin: 0 auto
+  max-width: 1200px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-around
+  flex-direction: row
+  flex-wrap: wrap
+  .link
+    text-decoration: none
+    position: relative
+  &__feature
+    box-sizing: border-box
+    padding: .5rem
+    width: calc(1200px / 3)
+    margin-bottom: 2rem
+  &__icon
+    position: absolute
+    left: 0
+    top: 0
+    box-sizing: border-box
+    font-size: 50px
+    padding: 2rem
+    border-radius: 50%
+    border-color: $mainLinksHoverColor
+    border-width: 5px
+    border-style: solid
+    overflow: hidden
+    color: black
+    transition: color .3s ease-in-out .2s
+    width: $featureIconSize
+    height: $featureIconSize
+    i
+      z-index: 999
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      &::before
+        position: relative
+    &:hover
+      color: white
+      &::after
+        transform: scale(1)
+    &::after
+      content: ''
+      transform: scale(0)
+      transition: all .5s ease-in-out
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: $mainLinksHoverColor
+      border-radius: 50%
+  &__info
+    margin-left: calc(#{$featureIconSize} + 1rem)
+    display: inline-block
+    width: calc(100% - $featureIconSize - 1rem)
+  &__title
+    margin-top: 0
+  &__description
+    color: #454545
+    font-size: 14px

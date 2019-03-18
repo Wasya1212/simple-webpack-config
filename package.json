@@ -68,9 +68,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.3.1",
+    "animejs": "^3.0.1",
     "chart.js": "^2.7.3",
     "currencylayer-client": "^1.0.0",
     "ecb-euro-exchange-rates": "^1.1.1",
+    "jquery": "^3.3.1",
     "newsapi": "^2.4.0",
     "react": "^16.8.1",
     "react-chartjs-2": "^2.7.4",

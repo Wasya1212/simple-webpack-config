@@ -1,0 +1,48 @@
+-
+  features = [
+    {
+      title: 'Впровадження',
+      icon: 'fas fa-tools',
+      description: 'Впровадження програмних продуктів на базі 1С:Підприємство',
+      link: '#'
+    },
+    {
+      title: 'Консультації',
+      icon: 'fab fa-teamspeak',
+      description: 'Консультації з вибору програмного забезпечення',
+      link: '#'
+    },
+    {
+      title: 'Навчальний центр',
+      icon: 'fas fa-book-open',
+      description: 'Центр Сертифікованого навчання (ЦСО)',
+      link: '#'
+    },
+    {
+      title: 'Пакети супроводу',
+      icon: 'fas fa-boxes',
+      description: 'Обери свій пакет супроводу',
+      link: '#'
+    },
+    {
+      title: 'Супровід (ІТС)',
+      icon: 'fas fa-sync',
+      description: '2 види (ІТС): рівня ПРОФ і рівня ТЕХНО',
+      link: '#'
+    },
+    {
+      title: 'Фредо-Звіт',
+      icon: 'far fa-calendar-alt',
+      description: 'Здача електронної звітності «Фредо-Звіт»',
+      link: '#'
+    }
+  ]
+
++b.NAV.features
+  each feature in features
+    +e.A.feature.link(href= feature.link)
+      +e.DIV.icon
+        i(class= feature.icon)
+      +b.features__info
+        +e.H3.title= feature.title
+        +e.P.description= feature.description

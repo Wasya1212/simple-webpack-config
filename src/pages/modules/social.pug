@@ -1,30 +1,17 @@
--
-  socialNetworks = [
-    {
-      icon: '../assets/icons/twitter-bird-twitter-button-bird-picture-57340.png',
-      name: 'facebook',
-      link: 'https://www.facebook.com'
-    },
-    {
-      icon: '../assets/icons/kissclipart-facebook-logo-no-border-clipart-facebook-social-me-f55201dcf7b9bc94.png',
-      name: 'twitter',
-      link: 'https://twitter.com'
-    },
-    {
-      icon: '../assets/icons/instagram.png',
-      name: 'instagram',
-      link: 'https://www.instagram.com'
-    },
-    {
-      icon: '../assets/icons/google_plus-svg.png',
-      name: 'google',
-      link: 'https://mail.google.com'
-    }
-  ]
-
 +b.UL.socials
-  each socialNetwork in socialNetworks
-    +e.LI.item
-      +b.DIV(class="socials__item__container " + socialNetwork.name)
-        +e.A.icon(href= socialNetwork.link)
-          +e.IMG(src= socialNetwork.icon, alt= socialNetwork.name)
+  +e.LI.item
+    +b.DIV(class="socials__item__container facebook")
+      +e.A.icon(href="https://www.facebook.com")
+        include ../../assets/icons/facebook-app-symbol.svg
+  +e.LI.item
+    +b.DIV(class="socials__item__container twitter")
+      +e.A.icon(href="https://twitter.com")
+        include ../../assets/icons/twitter-logo-silhouette.svg
+  +e.LI.item
+    +b.DIV(class="socials__item__container instagram")
+      +e.A.icon(href="https://www.instagram.com")
+        include ../../assets/icons/instagram.svg
+  +e.LI.item
+    +b.DIV(class="socials__item__container google")
+      +e.A.icon(href="https://mail.google.com")
+        include ../../assets/icons/google.svg

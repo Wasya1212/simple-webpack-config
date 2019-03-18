@@ -1,0 +1,31 @@
+-
+  slides = [
+    {
+      slogan: 'Обирай кращих!',
+      img: '../assets/images/top-slider/1002.jpg',
+      desc: 'Повний спектр послуг з автоматизації управління на базі інформаційних систем.',
+      link: '#'
+    },
+    {
+      slogan: 'Компанія «Рарус Львів»',
+      img: '../assets/images/top-slider/af4021_99fd3cfce18745a5a71745b0d7a01354.jpg',
+      desc: 'Наша робота - це автоматизація, яка збільшує прибуток і дарує радість.',
+      link: '#'
+    },
+    {
+      slogan: 'Супровід та підтримка',
+      img: '../assets/images/top-slider/Bright_Night_Cities_Scenery_Photo_HD_Wallpaper_12_2560x1600.jpg',
+      desc: 'Працівники нашої компанії висококваліфіковані та сертифіковані спеціалісти.',
+      link: '#'
+    },
+  ]
+
++b.UL.slider
+  each slide in slides
+    +e.LI.slide
+      +e.IMG.image(src= slide.img, alt="")
+      +b.DIV.text
+        +e.H3.slogan= slide.slogan
+        +e.P.desc= slide.desc
+        +e.A.more.btn(href= slide.link) Більше
+        

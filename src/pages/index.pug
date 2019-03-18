@@ -17,8 +17,35 @@ block afterload
   script(src="js/index.js")
   
 block content
-  h1 Hello world
-  video(controls="controls")
-    source(src="videos/green_cell.mp4" type="video/mp4")    
-  img(src="../assets/images/Flowering_trees_Sakura_427376.jpg", alt="Flowering_trees_Sakura_427376")  
-  
+  section.top-slider
+    include ./components/slider
+  section.service
+    center
+      h2.title Наші послуги
+      pre.about
+        |Компанія "Рарус Львів" надає повний перелік послуг з впровадження 
+        |систем автоматизації на базі інформаційних систем.
+        |
+        |Вартість години роботи спеціаліста від 750 грн без ПДВ.
+      a.price-list(href="#") Топ доробок
+    include ./components/features
+  section.news
+    center
+      h2.title Новини
+    include ./components/news
+  section.clients
+    .wrapper
+      center 
+        h2.title Наші клієнти
+      include ./components/clients-slider
+  section.partners
+    .wrapper
+      center
+        h2.title Наші партнери
+        pre.about
+          |За роки роботи компанія співпрацює з кращими компаніями, яких об'єднує успіх і робота на результат. 
+          |Ви можете стати нашим партнером
+        a.partnership(href="#") Стати партнером
+      include ./components/partners-slider
+  section.bottom-navigation
+    include ./components/extended-navigation  

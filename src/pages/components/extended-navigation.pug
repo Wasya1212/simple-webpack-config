@@ -1,0 +1,124 @@
+-
+  sections = [
+    {
+      title: 'КОМПАНІЯ',
+      links: [
+        {
+          name: 'Про компанію',
+          link: 'http://www.rarus.lviv.ua/ua/about/'
+        },
+        {
+          name: 'Послуги',
+          link: 'http://www.rarus.lviv.ua/ua/service/'
+        },
+        {
+          name: 'Продукти',
+          link: 'http://www.rarus.lviv.ua/ua/catalog/'
+        },
+        {
+          name: 'Навчання та сертифікація',
+          link: 'http://www.rarus.lviv.ua/ua/training/'
+        },
+        {
+          name: 'Контакти',
+          link: 'http://www.rarus.lviv.ua/ua/contacts/'
+        }
+      ]
+    },
+    {
+      title: 'ПОСЛУГИ',
+      links: [
+        {
+          name: 'Консультації з вибору програм',
+          link: 'http://www.rarus.lviv.ua/ua/service/consult/'
+        },
+        {
+          name: 'Доставка та встановлення',
+          link: 'http://www.rarus.lviv.ua/ua/service/setup/'
+        },
+        {
+          name: 'Налаштування та впровадження',
+          link: 'http://www.rarus.lviv.ua/ua/service/customize/'
+        },
+        {
+          name: 'Навчання та сертифікація',
+          link: 'http://www.rarus.lviv.ua/ua/service/training.php'
+        },
+        {
+          name: 'Супровід (ІТС)',
+          link: 'http://www.rarus.lviv.ua/ua/service/resistance/support.php'
+        },
+        {
+          name: 'Сервісний супровід',
+          link: 'http://www.rarus.lviv.ua/ua/service/service_support/'
+        },
+        {
+          name: 'Фредо-Звіт',
+          link: 'http://www.rarus.lviv.ua/ua/service/1c-zvit'
+        },
+        {
+          name: 'ТОП обробок, котрі полегшують роботу',
+          link: 'http://www.rarus.lviv.ua/ua/top.php'
+        }
+      ]
+    },
+    {
+      title: 'ПРОДУКТИ',
+      links: [
+        {
+          name: '1С:Підприємство 8',
+          link: 'http://www.rarus.lviv.ua/ua/catalog/1C-Enterprise/'
+        },
+        {
+          name: 'Інформаційно-технологічний супровід (ІТС)',
+          link: 'http://www.rarus.lviv.ua/ua/catalog/its/'
+        },
+        {
+          name: 'Бітрікс',
+          link: 'http://www.rarus.lviv.ua/ua/catalog/bitrix/'
+        },
+        {
+          name: 'Програмне забезпечення інших виробників',
+          link: 'http://www.rarus.lviv.ua/ua/catalog/other_vendors/'
+        },
+        {
+          name: 'Галузеві продукти',
+          link: 'http://www.rarus.lviv.ua/ua/catalog/other_sectoral_products/'
+        }
+      ]
+    },
+    {
+      title: 'КЛІЄНТИ',
+      links: [
+        {
+          name: 'Футбольний клуб КАРПАТИ',
+          link: 'http://www.fckarpaty.lviv.ua/'
+        },
+        {
+          name: 'Медіахолдинг ZIK',
+          link: 'http://zik.ua/'
+        },
+        {
+          name: 'Леокераміка',
+          link: 'http://leoceramika.com/'
+        },
+        {
+          name: 'Електромайстер',
+          link: 'http://emaster.com.ua/'
+        },
+        {
+          name: 'Dunapack Packaging',
+          link: 'http://www.dunapack.ua/'
+        }
+      ]
+    },
+  ]
+
++b.NAV.bottom-navbar
+  each section in sections
+    +e.section
+      +e.H3.title= section.title
+      +b.UL.bottom-navbar__links
+        each link in section.links
+          +e.LI.link
+            +e.A(href= link.link)= link.name

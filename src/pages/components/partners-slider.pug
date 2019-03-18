@@ -1,0 +1,34 @@
+-
+  partners = [
+    {
+      img: '../assets/images/partners-slider/buh.png',
+      link: 'http://www.rarus.lviv.ua/ua/detail.php?ID=1446',
+      name: 'Все про бухгалтерський облiк'
+    },
+    {
+      img: '../assets/images/partners-slider/zah.png',
+      link: 'http://www.rarus.lviv.ua/ua/detail.php?ID=1445',
+      name: 'Західна Консалтингова група'
+    },
+    {
+      img: '../assets/images/partners-slider/sam.png',
+      link: 'http://www.rarus.lviv.ua/ua/detail.php?ID=1447',
+      name: 'Самопоміч'
+    },
+    {
+      img: '../assets/images/partners-slider/LSC.png',
+      link: 'http://www.rarus.lviv.ua/ua/detail.php?ID=1448',
+      name: 'LSC'
+    },
+    {
+      img: '../assets/images/partners-slider/BEST.png',
+      link: 'http://www.rarus.lviv.ua/ua/detail.php?ID=1444',
+      name: 'BEST'
+    }
+  ]
+
++b.UL.partners-slider
+  each partner in partners
+    +e.LI.slide
+      a(href= partner.link, title= partner.name)
+        img(src= partner.img, alt= partner.name)
