@@ -1,0 +1,36 @@
+@import "../variables.sass"
+
+@mixin text
+  a
+    text-decoration: none
+    color: $mainLinksHoverColor
+    transition: all .1s ease-in-out
+    cursor: pointer
+    display: inline-block
+    font-family: sans-serif
+    font-size: 14px
+    &:hover
+      color: darken($mainLinksHoverColor, 20%)
+      text-decoration: underline
+  p, pre, li, ul, ol, span
+    font-weight: normal
+    font-family: sans-serif
+    font-size: 14px
+    cursor: default
+    color: #454545
+    text-indent: 2ch
+  ul, ol
+    margin: 0
+    padding: 0
+    margin-bottom: .5rem
+  li
+    margin-left: 1rem
+    padding: .5rem 0
+    text-indent: 0
+  h2, h3
+    cursor: default
+    font-weight: normal
+  h2
+    font-size: 35px
+  h3
+    font-size: 25px

@@ -70,6 +70,41 @@ module.exports = {
       styles: [
         'catalog'
       ]
+    },
+    {
+      name: 'consultation',
+      scripts: [],
+      styles: [
+        'docs'
+      ]
+    },
+    {
+      name: 'instalation',
+      scripts: [],
+      styles: [
+        'docs'
+      ]
+    },
+    {
+      name: 'settings',
+      scripts: [],
+      styles: [
+        'docs'
+      ]
+    },
+    {
+      name: 'accompaniment',
+      scripts: [],
+      styles: [
+        'docs'
+      ]
+    },
+    {
+      name: 'fredo',
+      scripts: [],
+      styles: [
+        'docs'
+      ]
     }
   ]
 }
