@@ -11,11 +11,11 @@ block vars
     }
 
 block beforeload
-  link(rel="stylesheet", href="css/frontpage.css")
-  
+  link(rel="stylesheet", href="../css/frontpage.css")
+
 block afterload
-  script(src="js/index.js")
-  
+  script(src="../js/index.js")
+
 block content
   section.top-slider
     include ./components/slider
@@ -23,7 +23,7 @@ block content
     center
       h2.title Наші послуги
       pre.about
-        |Компанія "Рарус Львів" надає повний перелік послуг з впровадження 
+        |Компанія "Рарус Львів" надає повний перелік послуг з впровадження
         |систем автоматизації на базі інформаційних систем.
         |
         |Вартість години роботи спеціаліста від 750 грн без ПДВ.
@@ -35,7 +35,7 @@ block content
     include ./components/news
   section.clients
     .wrapper
-      center 
+      center
         h2.title Наші клієнти
       include ./components/clients-slider
   section.partners
@@ -43,9 +43,7 @@ block content
       center
         h2.title Наші партнери
         pre.about
-          |За роки роботи компанія співпрацює з кращими компаніями, яких об'єднує успіх і робота на результат. 
+          |За роки роботи компанія співпрацює з кращими компаніями, яких об'єднує успіх і робота на результат.
           |Ви можете стати нашим партнером
         a.partnership(href="#") Стати партнером
       include ./components/partners-slider
-  section.bottom-navigation
-    include ./components/extended-navigation  

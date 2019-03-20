@@ -30,7 +30,7 @@ const getEntryStyles = config => {
 const getProductionHtmlPlugins = config => {
   return config.pages.map(page => {
     return new HtmlWebpackPlugin({
-      filename: `${page.name}.html`,
+      filename: `html/${page.name}.html`,
       inject: false,
       template: path.join(config.pagesDir, `${page.name}.pug`),
       minify: {
@@ -45,7 +45,7 @@ const getProductionHtmlPlugins = config => {
 const getDevelopmentHtmlPlugins = config => {
   return config.pages.map(page => {
     return new HtmlWebpackPlugin({
-      filename: `${page.name}.html`,
+      filename: `html/${page.name}.html`,
       inject: false,
       template: path.join(config.pagesDir, `${page.name}.pug`),
       minify: false

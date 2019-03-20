@@ -1,0 +1,26 @@
+.bottom-navbar
+  max-width: 1200px
+  margin: 0 auto
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  &__section
+    display: inline-block
+    max-width: 300px
+  &__title
+    font-size: 25px
+    font-weight: normal
+    cursor: default
+  &__link
+    list-style-type: none
+    a
+      text-decoration: none
+      padding: .5rem 1rem
+      box-sizing: border-box
+      transition: all .1s ease-in-out
+      font-size: 14px
+      color: #454545
+      &:hover
+        color: $mainLinksHoverColor

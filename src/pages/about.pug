@@ -11,10 +11,31 @@ block vars
     }
 
 block beforeload
-  link(rel="stylesheet", href="css/about.css")
+  link(rel="stylesheet", href="../css/about.css")
   
 block afterload
-  script(src="js/about.js")
+  script(src="../js/about.js")
   
 block content
-  h1 Hello about
+  section.about-us
+    center
+      h2.title Про компанію
+      pre.description
+        |Компанія "Рарус Львів" є учасником всеукраїнської  громадської організації "Спілка Автоматизаторів Бізнесу".
+        |САБ - одна з наймасштабніших громадських IT-організацій в Україні, яка об'єднує ІТ-компанії, які надають професійні та якісні послуги у сфері автоматизації.
+        |
+        |Члени САБ використовують сучасні інструменти і технології для автоматизації бізнес-задач українських підприємств. Це також висококваліфіковані команди фахівців, які забезпечують якісне впровадження, супровід та підтримку систем автоматизації.
+    include ./components/about-slider
+  section.projects
+    .wrapper
+      center
+        h2.title Проекти
+        pre.description
+          |Безліч реалізованих нами проектів в різних областях діяльності з різною специфікою ведення бізнесу.
+          |Кожний реалізований проект - починає жити разом з нами, стає частиною великої родини Рарус.
+      include ./components/projects-mixer
+  section.recognition
+    center
+      h2.title Сертифікація
+    +b.certificate
+      +e.IMG.image(src="../assets/images/sert_for_fatfox_3.jpg", alt="certificate")

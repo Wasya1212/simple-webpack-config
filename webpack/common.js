@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: webpackData.distDir,
     filename: 'js/[name].js',
-    publicPath: webpackData.distDir
+    publicPath: '../'
   },
   module: {
     rules: [
@@ -24,7 +24,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               emitFile: true, // Don't forget emit images.
-              outputPath: '../img/',
+              outputPath: 'img/',
               name: '[name]-[hash].[ext]',
               mozjpeg: {
                 progressive: true,

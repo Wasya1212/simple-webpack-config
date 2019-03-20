@@ -33,7 +33,7 @@ module.exports = merge(require('./common'), {
     publicPath: '/',
     compress: false,
     port: 3000,
-    index: 'index.html',
+    index: 'html/index.html',
     open: true,
     overlay: {
       warnings: true,

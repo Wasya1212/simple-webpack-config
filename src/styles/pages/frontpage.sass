@@ -1,5 +1,5 @@
 @import "../index.sass"
-@import "../mixins/slider.sass"
+@import "../components/slider.sass"
 @import "../components/features.sass"
 
 body
@@ -8,36 +8,6 @@ body
   background-size: cover
   width: 100%
   height: 100%
-
-.bottom-navigation
-  padding: 2rem 1rem
-  background-color: white
-  .bottom-navbar
-    max-width: 1200px
-    margin: 0 auto
-    display: -webkit-flex
-    display: -ms-flex
-    display: flex
-    justify-content: space-between
-    align-items: flex-start
-    &__section
-      display: inline-block
-      max-width: 300px
-    &__title
-      font-size: 25px
-      font-weight: normal
-      cursor: default
-    &__link
-      list-style-type: none
-      a
-        text-decoration: none
-        padding: .5rem 1rem
-        box-sizing: border-box
-        transition: all .1s ease-in-out
-        font-size: 14px
-        color: #454545
-        &:hover
-          color: $mainLinksHoverColor
 
 .partners
   padding: 2rem 1rem 3rem 1rem
@@ -150,6 +120,7 @@ body
       font-size: 18px
       border-bottom: 1px solid #c2c2c2
       border-right: 1px solid #c2c2c2
+      transition: all .1s ease-in-out
       &:hover
         color: $mainLinksHoverColor
 

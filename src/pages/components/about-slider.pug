@@ -1,0 +1,20 @@
+-
+  images = [
+    {
+      src: '../assets/images/about-slider/Printbook_21x15_R.кеуеjpg.jpg',
+      name: 'Printbook_21x15_R.кеуеjpg'
+    },
+    {
+      src: '../assets/images/about-slider/office-cleaning.jpg',
+      name: 'office-cleaning'
+    },
+    {
+      src: '../assets/images/about-slider/TOS-Headquarters-Waalhaven.jpg',
+      name: 'TOS-Headquarters-Waalhaven'
+    }
+  ]
+
++b.UL.about-slider
+  each image in images
+    +e.LI.slide
+      +e.IMG.image(src= image.src, alt= image.name) 
