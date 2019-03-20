@@ -1,0 +1,121 @@
+@import "../index.sass"
+@import "../components/extended-navbar.sass"
+@import "../components/features.sass"
+
+.services-list
+  background-color: white
+  padding: 2rem 1rem
+  .wrapper
+    max-width: 1200px
+    margin: 0 auto
+  center
+    .title
+      margin-top: 0
+      font-weight: normal
+      font-size: 35px
+  ul
+    padding: .5rem
+    margin: 0
+    box-sizing: border-box
+  li
+    list-style-type: none
+  .services-slider
+    display: inline-block
+    width: calc(100% - 300px - 1rem)
+    margin-left: 1rem
+    &__slide
+      a
+        outline: none
+        display: block
+        &:hover
+          color: $mainLinksHoverColor
+      img
+        width: 150px
+        height: 150px
+        object-fit: contain
+        object-position: center
+      p
+        width: 100%
+        word-wrap: break-word
+        text-indent: 2ch
+        cursor: default
+  .services-names-slider
+    display: inline-block
+    width: 300px
+    float: left
+    border: 1px solid #c2c2c2
+    border-bottom: none
+    border-right: none
+    padding: 0
+    .slick-active
+      color: $mainLinksColor !important
+      background-color: $mainLinksHoverColor
+      &::before
+        content: ''
+        display: inline-block
+        position: absolute
+        top: -5px
+        right: -5px
+        width: 0
+        height: 0
+        border-top: 2rem solid darken($mainLinksHoverColor, 20%)
+        border-left: 2rem solid transparent
+    &__slide
+      position: relative
+      padding: .75rem 1rem
+      cursor: pointer
+      font-size: 18px
+      border-bottom: 1px solid #c2c2c2
+      border-right: 1px solid #c2c2c2
+      transition: all .1s ease-in-out
+      &:hover
+        color: $mainLinksHoverColor
+
+.order
+  padding: 2rem 1rem
+  background-color: #f2f1f1
+  center
+    p, pre
+      font-family: sans-serif
+      font-size: 14px
+      cursor: default
+      color: #454545
+    .title
+      font-size: 35px
+      font-weight: normal
+      margin-top: 0
+    .btn
+      margin-top: 1rem
+      color: $mainLinksColor
+      background-color: $mainLinksHoverColor
+      padding: .5rem 1rem
+      border-radius: 5px
+      transition: all .25s ease-in-out
+      text-decoration: none
+      &:hover
+        background-color: darken($mainLinksHoverColor, 20%)
+
+.service
+  center
+  .title
+    font-size: 35px
+    font-weight: normal
+    cursor: default
+  .about
+    font-family: sans-serif
+    font-size: 14px
+    color: #454545
+    cursor: default
+  .features
+    margin-top: 2rem
+  .price-list
+    margin-top: 1rem
+    text-decoration: none
+    text-transform: lowercase
+    padding: .5rem 1rem
+    border-radius: 5px
+    background-color: $mainLinksHoverColor
+    color: $mainLinksColor
+    transition: all .25s ease-in-out
+    &:hover
+      background-color: darken($mainLinksHoverColor, 20%)

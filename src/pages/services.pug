@@ -1,0 +1,42 @@
+extends layout/default
+
+block vars
+  -
+    page = {
+      language: 'ua',
+      name: 'home',
+      title: 'Frontpage',
+      appTitle: 'Frontpage',
+      description: 'Main page'
+    }
+
+block beforeload
+  link(rel="stylesheet", href="../css/services.css")
+  
+block afterload
+  script(src="../js/services.js")
+  
+block content
+  section.service
+    center
+      h2.title Наші послуги
+      pre.about
+        |Компанія "Рарус Львів" надає повний перелік послуг з впровадження
+        |систем автоматизації на базі інформаційних систем.
+        |
+        |Вартість години роботи спеціаліста від 750 грн без ПДВ.
+      a.price-list(href="#") Топ доробок
+    include ./components/features
+  section.order
+    center
+      h2.title Починай діяти
+      p.slogan При роботі з нами ви отримуєте наступні переваги:
+      pre.description
+        |Висока швидкість впровадження та швидке повернення інвестицій;
+        |Впровадження та адаптація готових галузевих рішень;
+        |Великий досвід надання послуг з впровадження та супроводу продуктів;
+        |Підтримка та постійний діалог з клієнтами
+      a.btn(href="html/contacts.html") Замовити послугу
+  section.services-list
+    .wrapper.clearfix
+      include ./components/services-slider
