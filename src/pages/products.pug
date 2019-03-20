@@ -1,0 +1,25 @@
+extends layout/default
+
+block vars
+  -
+    page = {
+      language: 'ua',
+      name: 'home',
+      title: 'Frontpage',
+      appTitle: 'Frontpage',
+      description: 'Main page'
+    }
+
+block beforeload
+  link(rel="stylesheet", href="../css/products.css")
+  
+block afterload
+  script(src="../js/products.js")
+  
+block content
+  section.products
+    .wrapper
+      center
+        h2.title Продукти
+        p.description Програми на платформі нового покоління 1С:Підприємство 8 є потужними і ефективними інструментами для управління і автоматизації бізнесу. Вони допоможуть вам оптимізувати практично будь-який бізнес процес і заощадити гроші, час і ресурси Вашої компанії. За допомогою інформаційних систем Ви зможете підняти ваш бізнес на новий якісний рівень
+      include ./components/products.pug

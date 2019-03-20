@@ -34,6 +34,15 @@ module.exports = {
       styles: [
         'services'
       ]
+    },
+    {
+      name: 'products',
+      scripts: [
+        'products'
+      ],
+      styles: [
+        'products'
+      ]
     }
   ]
 }
