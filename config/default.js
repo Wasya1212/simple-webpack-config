@@ -61,6 +61,15 @@ module.exports = {
       styles: [
         'contacts'
       ]
+    },
+    {
+      name: 'catalog',
+      scripts: [
+        'catalog'
+      ],
+      styles: [
+        'catalog'
+      ]
     }
   ]
 }

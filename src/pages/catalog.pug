@@ -1,0 +1,21 @@
+extends layout/default
+
+block vars
+  -
+    page = {
+      language: 'ua',
+      name: 'home',
+      title: 'Frontpage',
+      appTitle: 'Frontpage',
+      description: 'Main page'
+    }
+    
+block beforeload
+  link(rel="stylesheet", href="../css/catalog.css")
+  
+block afterload
+  script(src="../js/catalog.js")
+  
+block content
+  section.catalog
+    include ./components/catalog
