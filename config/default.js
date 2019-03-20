@@ -43,6 +43,15 @@ module.exports = {
       styles: [
         'products'
       ]
+    },
+    {
+      name: 'learn',
+      scripts: [
+        'learn'
+      ],
+      styles: [
+        'learn'
+      ]
     }
   ]
 }

@@ -1,0 +1,48 @@
+-
+  features = [
+    {
+      title: 'Сертифікаця Професіонал',
+      icon: 'fas fa-male',
+      description: 'Покращуй свою роботу',
+      link: '#'
+    },
+    {
+      title: 'Індивідуальне навчання',
+      icon: 'fas fa-graduation-cap',
+      description: `Навчання може проводитися на будь-яку тематику, яка пов'язана з нашими продуктами`,
+      link: '#'
+    },
+    {
+      title: 'Сертифіковані курси',
+      icon: 'fas fa-certificate',
+      description: 'Дізнайтеся першими про безкоштовні семінарах, цікавих зустрічах',
+      link: '#'
+    },
+    {
+      title: 'Майстер-класи',
+      icon: 'fas fa-brain',
+      description: 'На прохання клієнтів ми можемо організувати майстер-класи на наступні теми...',
+      link: '#'
+    },
+    {
+      title: 'Навчання - сила',
+      icon: 'fab fa-superpowers',
+      description: 'Повір у свої можливості',
+      link: '#'
+    },
+    {
+      title: 'Запис на курси',
+      icon: 'fas fa-users',
+      description: 'Заповнюйте форму і реєструйтеся на курси безкоштовно',
+      link: '#'
+    }
+  ]
+
++b.NAV.features
+  each feature in features
+    +e.A.feature.link(href= feature.link)
+      +e.DIV.icon
+        i(class= feature.icon)
+      +b.features__info
+        +e.H3.title= feature.title
+        +e.P.description= feature.description
