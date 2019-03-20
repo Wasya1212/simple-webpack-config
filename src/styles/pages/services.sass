@@ -84,8 +84,10 @@
       a
         outline: none
         display: block
+        transition: all .1s ease-in-out
         &:hover
-          color: $mainLinksHoverColor
+          color: darken($mainLinksHoverColor, 20%)
+          text-decoration: underline
       img
         width: 150px
         height: 150px
