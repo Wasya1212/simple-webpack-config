@@ -1,0 +1,58 @@
+extends layout/default
+
+block vars
+  -
+    page = {
+      language: 'ua',
+      name: 'home',
+      title: 'Frontpage',
+      appTitle: 'Frontpage',
+      description: 'Main page'
+    }
+
+block beforeload
+  link(rel="stylesheet", href="../css/contacts.css")
+  
+block afterload
+  script(src="../js/contacts.js")
+  
+block content
+  section.contacts
+    center
+      h2.title Контакти
+      h3.corporation-name РАРУС ЛЬВІВ, ТОВ 
+      div.section
+        p
+          strong Адреса:	79018, м. Львів, вул. Стороженка, 12, пов. 6, оф. 64
+        p
+          strong Поштова адреса:	79018, м. Львів, а/с 9630 
+      div.section
+        p
+          |Телефон контактний:
+          strong (032) 2329099
+        p
+          |Телефон моб.:
+          strong 0676738689, 0931623587, 0668441276
+        p
+          |Телефон лінії консультацій:
+          strong 0675341566
+        p
+          |Факс:
+          strong (032) 2395604
+      div.section
+        p
+          |Електронна пошта:
+          strong sale@rarus.lviv.ua
+        p
+          |Сайт:
+          strong www.rarus.lviv.ua 
+        p
+          |ICQ:
+          strong 615525020
+        p
+          |Skype:
+          strong tellur-lviv
+        p Режим роботи: 9:00 - 18:00 (в робочі дні)
+    .map
+      h2 Шукай нас тут:)
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.038916941071!2d23.99954011608332!3d49.841726279395964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add9b5e745dad%3A0xcf285632eb23321f!2zMdChLdCi0LXQu9C70YPRgC7QnNC-0LTRg9C70Yw!5e0!3m2!1sru!2sua!4v1553111443492", width="600", height="450", frameborder="0", style="border:0", allowfullscreen)
