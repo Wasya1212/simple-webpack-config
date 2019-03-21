@@ -3,8 +3,11 @@
 
 // HEADER
 @mixin header
-  body
-    padding-top: 40px !important
+  @include responsive(phone)
+    .header__navigation__navbar
+      width: 100% !important
+    body
+      padding-top: 40px !important
   .header
     @include responsive(phone)
       display: -webkit-flex
