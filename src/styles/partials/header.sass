@@ -14,8 +14,36 @@ $soclialsWidth: 130px
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
   z-index: 9999
   position: relative
+  &__responsive-switcher
+    background-color: #000000
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+    display: none
+    padding: .5rem 1rem
+    box-sizing: border-box
+    .switch
+      width: 40px
+      height: 40px
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      cursor: pointer
+      div
+        width: 100%
+        height: 3px
+        background-color: #fff
+    .responsive-logo
+      width: 40px
+      height: 40px
+      display: inline-block
   &__container
-    width: 1200px
+    min-width: 0
+    width: 100%
     max-width: 1200px
     margin: 0 auto
   &__top-bar

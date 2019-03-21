@@ -9,12 +9,22 @@ import './libs/slick/slick/slick.js';
 import './libs/slick/slick/slick.css';
 
 $(document).ready(() => {
+  $('.header .switch.btn').click(function(event) {
+    $('.header').toggleClass('disabled');
+
+    if (!$('.header').hasClass('disabled')) {
+      $('html').css('overflow', 'hidden');
+    } else {
+      $('html').css('overflow', 'auto');
+    }
+  });
+
   $('.partners-slider').slick({
     arrows: false,
     fade: false,
     draggable: true,
     dots: true,
-    slidesToShow: 4
+    slidesToShow: $(window).width() < 720 ? 1 : 4
   });
 
   $('.clients-slider').slick({

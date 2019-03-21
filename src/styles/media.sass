@@ -1,0 +1,101 @@
+@import "./mixins/media.sass"
+// 960
+
+// HEADER
+@mixin header
+  .header
+    @include responsive(phone)
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column-reverse
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 99999
+      &.disabled
+        .header__navigation, .header__top-bar
+          position: absolute
+          left: -9999em
+  .logo-desc
+    @include responsive(tablet)
+      display: none
+  .header__navigation__logo-container
+    @include responsive(tablet)
+      height: 45px
+      max-width: 45px
+  .header__top-bar
+    @include responsive(phone)
+      max-height: none !important
+      padding: 1rem !important
+      .header__container
+        flex-direction: column !important
+        flex-wrap: nowrap !important
+      .contacts__list__item
+        display: block !important
+        text-align: left
+        padding: .5rem
+  .header__responsive-switcher
+    @include responsive(phone)
+      display: -webkit-flex !important
+      display: -ms-flex !important
+      display: flex !important
+  .header__navigation__logo-container
+    @include responsive(phone)
+        opacity: 0
+        position: absolute
+  .header__navigation
+    @include responsive(phone)
+      background-color: black
+      border-bottom: 2px solid $mainLinksHoverColor
+      a
+        color: white !important
+        width: 100%
+        box-sizing: border-box
+        padding: .5rem !important
+        text-align: center
+        &:active
+          background-color: lighten(black, 10%)
+        &:hover
+          &::after
+            display: none !important
+
+// FOOTER
+@mixin footer
+  .footer__navigation
+    @include responsive(phone)
+      a
+        margin-bottom: .5rem
+
+// BOTTOM NAVIGATION
+@mixin bottomNav
+  .bottom-navbar
+    @include responsive(phone)
+      flex-direction: column !important
+      &__section
+        width: 100% !important
+
+// FRONTPAGE
+@mixin frontpage
+  .top-slider
+    margin-top: 40px
+    .slider__slide
+      @include responsive(tablet)
+        height: 400px !important
+      @include responsive(phone)
+        height: calc(100vh - 40px) !important
+  .news-list__news
+    @include responsive(phone)
+      width: 100% !important
+      text-align: center
+  .clients-names-slider, .clients-slider
+    @include responsive(phone)
+      width: 100% !important
+  .clients-slider
+    @include responsive(phone)
+      margin: 0 !important
+  .partners-slider
+    @include responsive(phone)
+      padding: 0 !important
+      &__slide
+        text-align: center
