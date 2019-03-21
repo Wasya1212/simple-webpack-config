@@ -1,6 +1,9 @@
 @import "../index.sass"
 @import "../components/extended-navbar.sass"
 @import "../components/features.sass"
+@import "../media.sass"
+
+@include services()
 
 .services-slider__slide
   a
@@ -159,6 +162,7 @@
         background-color: darken($mainLinksHoverColor, 20%)
 
 .service
+  padding: 0 1rem
   center
   .title
     font-size: 35px

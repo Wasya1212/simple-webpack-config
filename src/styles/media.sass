@@ -90,6 +90,18 @@
         margin: 1rem 0 0 0 !important
         padding: 0 !important
 
+// SERVICES
+@mixin services
+  .services-list
+    @include responsive(phone)
+      .services-names-slider, .services-slider
+        width: 100% !important
+      .services-slider
+        margin: 1rem 0 0 0 !important
+        padding: 0 !important
+        .slick-list
+          overflow: visible !important
+
 // FRONTPAGE
 @mixin frontpage
   .top-slider

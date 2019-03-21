@@ -5,7 +5,7 @@ import './libs/slick/slick/slick.js';
 import './libs/slick/slick/slick.css';
 
 $(document).ready(() => {
-  $('.services-slider').slick({
+  const slider = $('.services-slider').slick({
     arrows: false,
     fade: true,
     draggable: false
