@@ -11,7 +11,8 @@ module.exports = {
     {
       name: 'index',
       scripts: [
-        'index'
+        'index',
+        'main'
       ],
       styles: [
         'frontpage'
@@ -20,7 +21,8 @@ module.exports = {
     {
       name: 'about',
       scripts: [
-        'about'
+        'about',
+        'main'
       ],
       styles: [
         'about'
@@ -29,7 +31,8 @@ module.exports = {
     {
       name: 'services',
       scripts: [
-        'services'
+        'services',
+        'main'
       ],
       styles: [
         'services'
@@ -38,7 +41,8 @@ module.exports = {
     {
       name: 'products',
       scripts: [
-        'products'
+        'products',
+        'main'
       ],
       styles: [
         'products'
@@ -47,7 +51,8 @@ module.exports = {
     {
       name: 'learn',
       scripts: [
-        'learn'
+        'learn',
+        'main'
       ],
       styles: [
         'learn'
@@ -56,7 +61,8 @@ module.exports = {
     {
       name: 'contacts',
       scripts: [
-        'contacts'
+        'contacts',
+        'main'
       ],
       styles: [
         'contacts'
@@ -65,7 +71,8 @@ module.exports = {
     {
       name: 'catalog',
       scripts: [
-        'catalog'
+        'catalog',
+        'main'
       ],
       styles: [
         'catalog'
@@ -73,35 +80,45 @@ module.exports = {
     },
     {
       name: 'consultation',
-      scripts: [],
+      scripts: [
+        'main'
+      ],
       styles: [
         'docs'
       ]
     },
     {
       name: 'instalation',
-      scripts: [],
+      scripts: [
+        'main'
+      ],
       styles: [
         'docs'
       ]
     },
     {
       name: 'settings',
-      scripts: [],
+      scripts: [
+        'main'
+      ],
       styles: [
         'docs'
       ]
     },
     {
       name: 'accompaniment',
-      scripts: [],
+      scripts: [
+        'main'
+      ],
       styles: [
         'docs'
       ]
     },
     {
       name: 'fredo',
-      scripts: [],
+      scripts: [
+        'main'
+      ],
       styles: [
         'docs'
       ]

@@ -3,6 +3,8 @@
 
 // HEADER
 @mixin header
+  body
+    padding-top: 40px !important
   .header
     @include responsive(phone)
       display: -webkit-flex
@@ -75,10 +77,22 @@
       &__section
         width: 100% !important
 
+// ABOUT
+@mixin about
+  .projects
+    @include responsive(phone)
+      .mixer
+        flex-wrap: wrap !important
+        flex-direction: column !important
+      .project-mixer-controls, .projects-mixer
+          width: 100% !important
+      .projects-mixer
+        margin: 1rem 0 0 0 !important
+        padding: 0 !important
+
 // FRONTPAGE
 @mixin frontpage
   .top-slider
-    margin-top: 40px
     .slider__slide
       @include responsive(tablet)
         height: 400px !important
