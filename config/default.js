@@ -48,16 +48,16 @@ module.exports = {
         'products'
       ]
     },
-    {
-      name: 'learn',
-      scripts: [
-        'learn',
-        'main'
-      ],
-      styles: [
-        'learn'
-      ]
-    },
+    // {
+    //   name: 'learn',
+    //   scripts: [
+    //     'learn',
+    //     'main'
+    //   ],
+    //   styles: [
+    //     'learn'
+    //   ]
+    // },
     {
       name: 'contacts',
       scripts: [
