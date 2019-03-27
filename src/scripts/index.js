@@ -1,4 +1,4 @@
-import video from '../assets/videos/green_cell.mp4';
+// import video from '../assets/videos/green_cell.mp4';
 
 import $ from 'jquery';
 import jQuery from 'jquery';
