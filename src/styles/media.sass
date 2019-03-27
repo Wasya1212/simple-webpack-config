@@ -122,6 +122,11 @@ $fillColor: #000
         height: 400px !important
       @include responsive(phone)
         height: calc(100vh - 40px) !important
+        min-height: calc(100vh - 40px) !important
+        .text__slogan
+          font-size: 30px !important
+        .text__desc
+          font-size: 20px !important
   .features
     @include responsive(tablet)
       &__feature

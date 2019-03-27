@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: webpackData.distDir,
     filename: 'js/[name].js',
-    publicPath: '../'
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -71,8 +71,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'css/[name].css',
-              context: '../'
+              name: '[name].css'
             }
           },
           'extract-loader',

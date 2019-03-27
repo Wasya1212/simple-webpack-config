@@ -11,10 +11,10 @@ block vars
     }
 
 block beforeload
-  link(rel="stylesheet", href="../css/frontpage.css")
+  link(rel="stylesheet", href="/frontpage.css")
 
 block afterload
-  script(src="../js/index.js")
+  script(src="js/index.js")
 
 block content
   section.top-slider
@@ -26,7 +26,7 @@ block content
         |Ми пропонуємо індивідуальний , комплексний підхід і вироблення рішення автоматизації бізнес-процесів підприємства.
         |
         |Працюємо якісно і на результат.
-      a.price-list(href="catalog.html") Топ доробок
+      //- a.price-list(href="catalog.html") Топ доробок
     include ./components/features
   //- section.news
     center
